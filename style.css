@@ -238,3 +238,27 @@ footer{
 .donate-button:hover {
   background: #2396c4;
 }
+
+
+
+
+
+/* =========================
+   UPDATE IMAGES
+   ========================= */
+
+.update-media {
+  margin-top: 16px;
+}
+
+.update-media img {
+  width: 100%;
+  height: auto;
+
+  border-radius: 10px;
+  border: 1px solid var(--border);
+
+  display: block;
+
+  box-shadow: var(--shadow-soft);
+}

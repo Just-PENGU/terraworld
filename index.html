@@ -1,62 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Terra World - Dev Log</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Terra World — Dev Log</title>
+  <meta name="description" content="Terra — Indie sandbox voxel game development log. Follow updates, progress and new features." />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>
-    <h1>Terra World</h1>
-    <p class="subtitle">Indie Sandbox Game – Development Log</p>
-</header>
+  <!-- ================= COVER (LOGO HUGE LEFT + TEXT HUGE RIGHT) ================= -->
 
-<main>
+  <!-- TITLE JOS (aici e “Terra World” + subtitlu, cum vrei tu) -->
+    <section class="page-title">
+      <h1>Terra World</h1>
+      <p class="subtitle">Indie Sandbox Voxel Game — Development Log</p>
+    </section>
+
+  <header class="cover">
+    <img src="assets/logo.png" alt="Terra Logo" class="cover-logo" />
+
+    <div class="cover-text">
+      <p class="cover-paragraph">
+        Terra is an experimental voxel sandbox game built in <strong>Java + OpenGL</strong>.
+        The goal is to create a world that feels alive — natural terrain, atmosphere,
+        and systems that evolve over time.
+      </p>
+
+      <p class="cover-paragraph">
+        This site is the public dev log: updates, patch notes, performance improvements,
+        new systems, and progress milestones as Terra grows into a full experience.
+      </p>
+
+      <p class="cover-paragraph">
+        If you’re here early — welcome. You’re seeing the foundations being built.
+      </p>
+
+      <a href="https://ko-fi.com/penguro"
+   target="_blank"
+   class="donate-button">
+   ☕ Support the Creator
+</a>
+    </div>
+
+    
+  </header>
+
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    
+
+    <!-- ABOUT -->
     <section class="about">
-        <h2>About The Project</h2>
-        <p>
-            TerraWorld is an experimental sandbox voxel game currently in development.
-            This website is used to share development updates, patch notes, bug fixes,
-            and progress reports.
-        </p>
+      <h2>About The Project</h2>
+      <p>
+        <strong>Terra</strong> is an experimental sandbox voxel game currently in development.
+        This website documents the evolution of the project — including development updates,
+        technical improvements, new systems, and progress milestones.
+      </p>
     </section>
 
+    <!-- ================= DEVLOG ================= -->
     <section class="updates">
-        <h2>Latest Updates</h2>
+      <h2>Development Updates</h2>
 
-        <div class="update-card">
-            <div class="update-header">
-                <h3>Update 0.0.2</h3>
-                <span>February 2026</span>
-            </div>
-            <ul>
-                <li>Added new terrain generation system</li>
-                <li>Improved world loading performance</li>
-                <li>Fixed lighting glitch in caves</li>
-                <li>Optimized chunk rendering</li>
-            </ul>
+      <!-- UPDATE 0.0.4 -->
+      <article class="update-card">
+        <div class="update-header">
+          <h3>Update 0.0.4</h3>
+          <time datetime="2026-01-02">January 2, 2026</time>
         </div>
 
-        <div class="update-card">
-            <div class="update-header">
-                <h3>Update 0.0.1</h3>
-                <span>January 2026</span>
-            </div>
+        <ul class="update-list">
+          <li>Introduced <strong>Water Shader v1.0</strong> with dynamic rendering.</li>
+          <li>Implemented a separate <strong>Water Mesh system</strong> independent from chunk meshes.</li>
+          <li>Reworked <strong>Chunk Mesh System v2.0</strong> for improved performance.</li>
+          <li>
+            Expanded block variety with new terrain blocks:
             <ul>
-                <li>Basic player movement system</li>
-                <li>Collision detection implemented</li>
-                <li>Fixed camera rotation bug</li>
+              <li>Water</li>
+              <li>Andesite</li>
+              <li>Podzol</li>
+              <li>Coarse Dirt</li>
+              <li>Moss Block</li>
             </ul>
+          </li>
+        </ul>
+      </article>
+
+      <!-- UPDATE 0.0.3 -->
+      <article class="update-card">
+        <div class="update-header">
+          <h3>Update 0.0.3</h3>
+          <time datetime="2025-12-30">December 30, 2025</time>
         </div>
+
+        <ul class="update-list">
+          <li>Retextured all blocks for visual consistency.</li>
+          <li>Added block selection highlighting.</li>
+          <li>Implemented block breaking and placement mechanics.</li>
+          <li>Introduced Terrain Generator System v2.0.</li>
+        </ul>
+      </article>
+
+      <!-- UPDATE 0.0.2 -->
+      <article class="update-card">
+        <div class="update-header">
+          <h3>Update 0.0.2</h3>
+          <time datetime="2025-12-27">December 27, 2025</time>
+        </div>
+
+        <ul class="update-list">
+          <li>Fixed camera movement bug.</li>
+          <li>Added FPS counter and coordinate display.</li>
+          <li>Added new blocks: Dirt and Stone.</li>
+          <li>Implemented first infinite flat terrain generator.</li>
+        </ul>
+      </article>
+
+      <!-- UPDATE 0.0.1 -->
+      <article class="update-card">
+        <div class="update-header">
+          <h3>Update 0.0.1</h3>
+          <time datetime="2025-12-26">December 26, 2025</time>
+        </div>
+
+        <ul class="update-list">
+          <li>Fixed camera rotation bug.</li>
+          <li>Added basic camera movement.</li>
+          <li>Created the first block prototype.</li>
+        </ul>
+      </article>
 
     </section>
-</main>
 
-<footer>
-    <p>TerraWorld © 2026 | Not released | Development in progress</p>
-</footer>
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>Terra — A New Era © 2026</p>
+    <p>Status: <strong>In Development</strong> | Not Released</p>
+  </footer>
 
 </body>
 </html>

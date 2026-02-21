@@ -1,0 +1,46 @@
+TERRA — GAME LICENSE
+Copyright © 2026 Pengu
+All Rights Reserved.
+
+Terra is an original video game project created and developed by Pengu.
+
+All source code, game systems, designs, concepts, gameplay mechanics,
+artwork, textures, models, audio, and other related content contained
+in this repository and project are original works created from scratch
+by the author, unless explicitly stated otherwise.
+
+No third-party assets, textures, or materials have been copied or used
+without permission.
+
+Ownership
+---------
+The author retains full ownership and intellectual property rights over
+the Terra game, including but not limited to:
+
+- Source code
+- Game engine systems
+- Visual assets
+- Textures and models
+- Game design and concepts
+- Branding and project identity
+
+Restrictions
+------------
+You may NOT:
+
+- Copy, redistribute, or reupload this project or its assets
+- Use any part of the code or assets in another project
+- Modify and redistribute the project
+- Claim the project or any part of it as your own work
+
+without explicit written permission from the author.
+
+Viewing the project for educational or personal reference purposes is allowed.
+
+Contact
+-------
+For permissions or licensing inquiries, contact:
+pengu (project author)
+
+This project is provided for viewing and demonstration purposes only.
+All rights reserved.

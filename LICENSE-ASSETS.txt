@@ -1,0 +1,5 @@
+All artwork, textures, models, and images contained in the /assets folder
+are © 2026 Pengu.
+
+These assets may not be copied, redistributed, modified, or used in other
+projects without explicit permission from the author.

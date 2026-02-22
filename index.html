@@ -3,279 +3,417 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Terra: A New Era — Dev Log</title>
-  <meta name="description" content="Terra — Indie sandbox voxel game development log. Follow updates, progress and new features." />
-
+  <meta name="description" content="Terra — Indie sandbox voxel game development log." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Geist';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/Geist-Regular.woff2') format('woff2');
+      font-weight: 400; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Geist';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/Geist-Medium.woff2') format('woff2');
+      font-weight: 500; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Geist';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/Geist-SemiBold.woff2') format('woff2');
+      font-weight: 600; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Geist';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/Geist-Bold.woff2') format('woff2');
+      font-weight: 700; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Geist';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/Geist-Black.woff2') format('woff2');
+      font-weight: 800 900; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Geist Mono';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-mono/GeistMono-Regular.woff2') format('woff2');
+      font-weight: 400; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Geist Mono';
+      src: url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-mono/GeistMono-Medium.woff2') format('woff2');
+      font-weight: 500 700; font-display: swap;
+    }
+  </style>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- ================= COVER (LOGO HUGE LEFT + TEXT HUGE RIGHT) ================= -->
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-brand">Terra<span>.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#updates" class="nav-link">Dev Log</a></li>
+      <li><a href="#bugs" class="nav-link">Bugs & Fixes</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- TITLE JOS (aici e “Terra World” + subtitlu, cum vrei tu) -->
-    <section class="page-title">
-      <h1>Terra: A New Era</h1>
-      <p class="subtitle">Indie Sandbox Voxel Game — Development Log</p>
-    </section>
-
-  <header class="cover">
-    <img src="assets/logo.png" alt="Terra Logo" class="cover-logo" />
-
-    <div class="cover-text">
-      <p class="cover-paragraph">
-        Terra is an experimental voxel sandbox game built in <strong>Java + OpenGL</strong>.
-        The goal is to create a world that feels alive — natural terrain, atmosphere,
-        and systems that evolve over time.
-      </p>
-
-      <p class="cover-paragraph">
-        This site is the public dev log: updates, patch notes, performance improvements,
-        new systems, and progress milestones as Terra grows into a full experience.
-      </p>
-
-      <p class="cover-paragraph">
-        If you’re here early — welcome. You’re seeing the foundations being built.
-      </p>
-
-      <a href="https://ko-fi.com/penguro"
-   target="_blank"
-   class="donate-button">
-   Support the Creator
-</a>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-inner">
+      <div class="hero-logo-wrap">
+        <img src="assets/logo.png" alt="Terra Logo" class="hero-logo" />
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">In Development</div>
+        <h1 class="hero-title">Terra<br><span>A New Era</span></h1>
+        <p class="hero-sub">Indie Sandbox Voxel Game built in Java + OpenGL</p>
+        <p class="hero-desc">
+          Terra is an experimental voxel sandbox where the world feels alive — natural terrain,
+          dynamic atmosphere, and systems that evolve over time. This is the public dev log:
+          updates, patch notes, new systems, and progress milestones as Terra grows.
+        </p>
+        <div class="hero-actions">
+          <a href="#updates" class="btn-primary">View Dev Log</a>
+          <a href="https://ko-fi.com/penguro" target="_blank" class="btn-secondary">Support on Ko-fi</a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    
-  </header>
-
-
-  <!-- ================= MAIN ================= -->
+  <!-- ===== MAIN ===== -->
   <main>
 
-    
-
     <!-- ABOUT -->
-    <section class="about">
-      <h2>About The Project</h2>
-      <p>
-        <strong>Terra</strong> is an experimental sandbox voxel game currently in development.
-        This website documents the evolution of the project — including development updates,
-        technical improvements, new systems, and progress milestones.
-      </p>
+    <section class="section" id="about">
+      <div class="section-inner">
+        <div class="section-label">About</div>
+        <h2 class="section-title">The Project</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">⚙️</div>
+            <h3>Voxel Engine</h3>
+            <p>Built from scratch in Java + OpenGL. Custom chunk meshing, terrain generation, and rendering pipeline.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🌍</div>
+            <h3>Living World</h3>
+            <p>Procedural biomes, dynamic day/night cycle, water systems, and evolving terrain features.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">📋</div>
+            <h3>Open Dev Log</h3>
+            <p>Every update, fix, and milestone documented publicly as the game grows toward a full release.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ================= DEVLOG ================= -->
-    <section class="updates">
-      <h2>Development Updates</h2>
+    <!-- DEV LOG -->
+    <section class="section" id="updates">
+      <div class="section-inner">
+        <div class="section-label">Changelog</div>
+        <h2 class="section-title">Development Updates</h2>
 
-      <!-- UPDATE 0.0.8 -->
-<article class="update-card">
-  <div class="update-header">
-    <h3>Update 0.0.8</h3>
-    <time datetime="2026-01-27">January 27, 2026</time>
-  </div>
+        <!-- 0.0.8 -->
+        <article class="update-card">
+          <div class="update-header">
+            <div class="update-version">
+              <span class="version-tag">v0.0.8</span>
+              <h3>Movement & World Systems</h3>
+            </div>
+            <time datetime="2026-01-27">Jan 27, 2026</time>
+          </div>
+          <ul class="update-list">
+            <li>Reworked <strong>Player Movement System v2.0</strong> — smoother movement, jumping, and shift mechanics.</li>
+            <li>Upgraded <strong>Procedural Tree Generator</strong> from v1.0 to v4.0 with significantly improved variation and generation logic.</li>
+            <li>Improved <strong>Water System & Water Mesh</strong> (v2.0 → v3.5) — better performance and reduced rendering lag.</li>
+          </ul>
+          <div class="update-media">
+            <img src="assets/oak_tree_v4.png" alt="Oak tree v4 screenshot">
+          </div>
+        </article>
 
-  <ul class="update-list">
+        <!-- 0.0.7 -->
+        <article class="update-card">
+          <div class="update-header">
+            <div class="update-version">
+              <span class="version-tag">v0.0.7</span>
+              <h3>Biomes & Trees</h3>
+            </div>
+            <time datetime="2026-01-23">Jan 23, 2026</time>
+          </div>
+          <ul class="update-list">
+            <li>Added <strong>hover tooltips</strong> for blocks in inventory and hotbar.</li>
+            <li>Implemented first <strong>Biome System v1.0</strong> — Plains, Forest, and Mountain biomes.</li>
+            <li>Implemented first <strong>Procedural Tree Generator v1.0</strong>.</li>
+            <li>Added <strong>Block Rotation</strong> support, starting with oak_log.</li>
+            <li>Introduced <strong>oak_log</strong> block with model and textures.</li>
+            <li>New blocks: Oak Log, Oak Planks, Oak Leaves, Oak Dense Leaves.</li>
+          </ul>
+          <div class="update-media-row">
+            <div class="update-media"><img src="assets/oak_tree_v1.png" alt="Oak tree v1"></div>
+            <div class="update-media"><img src="assets/log_rotation.png" alt="Log rotation"></div>
+          </div>
+        </article>
 
-    <li>
-      Reworked the <strong>Player Movement System (v2.0)</strong>, improving movement,
-      jumping, and shifting mechanics for smoother and more responsive controls.
-    </li>
+        <!-- 0.0.6 -->
+        <article class="update-card">
+          <div class="update-header">
+            <div class="update-version">
+              <span class="version-tag">v0.0.6</span>
+              <h3>3D Models & Sky</h3>
+            </div>
+            <time datetime="2026-01-15">Jan 15, 2026</time>
+          </div>
+          <ul class="update-list">
+            <li>Introduced <strong>3D Model System</strong> with Blockbench model support (16×16×16 scale).</li>
+            <li>Implemented <strong>Sky & Day/Night Cycle System</strong> — sun/moon rendering, smooth transitions, full 20-min cycle.</li>
+            <li>Created <strong>Creative Inventory</strong> with dynamic block ordering via JSON config.</li>
+            <li>Added <strong>Hotbar System</strong> (slots 1–9) with initial textures.</li>
+          </ul>
+        </article>
 
-    <li>
-      Upgraded the <strong>Procedural Tree Generator</strong> from v1.0 to v4.0,
-      significantly improving tree variation and generation logic.
-    </li>
+        <!-- 0.0.5 -->
+        <article class="update-card">
+          <div class="update-header">
+            <div class="update-version">
+              <span class="version-tag">v0.0.5</span>
+              <h3>JSON Block System</h3>
+            </div>
+            <time datetime="2026-01-08">Jan 8, 2026</time>
+          </div>
+          <ul class="update-list">
+            <li>Introduced <strong>JSON-based Block System v1.0</strong> — add blocks without touching engine code.</li>
+            <li>Upgraded <strong>Camera Movement System v2.0</strong>.</li>
+            <li>Improved <strong>Water System & Water Mesh v2.0</strong>.</li>
+            <li>Upgraded <strong>Terrain Generator System v3.0</strong>.</li>
+          </ul>
+          <div class="update-media">
+            <img src="assets/water.png" alt="Water system screenshot">
+          </div>
+        </article>
 
-    <li>
-      Improved the <strong>Water System & Water Mesh</strong> (v2.0 → v3.5),
-      resulting in better performance and reduced rendering lag.
-    </li>
+        <!-- 0.0.4 -->
+        <article class="update-card">
+          <div class="update-header">
+            <div class="update-version">
+              <span class="version-tag">v0.0.4</span>
+              <h3>Water & Chunks</h3>
+            </div>
+            <time datetime="2026-01-02">Jan 2, 2026</time>
+          </div>
+          <ul class="update-list">
+            <li>Introduced <strong>Water Shader v1.0</strong> with dynamic rendering.</li>
+            <li>Implemented separate <strong>Water Mesh system</strong> independent from chunk meshes.</li>
+            <li>Reworked <strong>Chunk Mesh System v2.0</strong> for improved performance.</li>
+            <li>New blocks: Water, Andesite, Podzol, Coarse Dirt, Moss Block.</li>
+          </ul>
+        </article>
 
-    <!-- IMAGE -->
-  <div class="update-media">
-    <img src="assets/oak_tree_v4.png" alt="First block prototype screenshot">
-  </div>
+        <!-- 0.0.3 -->
+        <article class="update-card">
+          <div class="update-header">
+            <div class="update-version">
+              <span class="version-tag">v0.0.3</span>
+              <h3>Block Interactions</h3>
+            </div>
+            <time datetime="2025-12-30">Dec 30, 2025</time>
+          </div>
+          <ul class="update-list">
+            <li>Retextured all blocks for visual consistency.</li>
+            <li>Added block selection highlighting.</li>
+            <li>Implemented block breaking and placement mechanics.</li>
+            <li>Upgraded to <strong>Terrain Generator System v2.0</strong>.</li>
+          </ul>
+        </article>
 
-  </ul>
-</article>
+        <!-- 0.0.2 -->
+        <article class="update-card">
+          <div class="update-header">
+            <div class="update-version">
+              <span class="version-tag">v0.0.2</span>
+              <h3>Early Fixes</h3>
+            </div>
+            <time datetime="2025-12-27">Dec 27, 2025</time>
+          </div>
+          <ul class="update-list">
+            <li>Fixed camera movement bug.</li>
+            <li>Added FPS counter and coordinate display.</li>
+            <li>New blocks: Dirt and Stone.</li>
+          </ul>
+        </article>
 
-      <!-- UPDATE 0.0.7 -->
-<article class="update-card">
-  <div class="update-header">
-    <h3>Update 0.0.7</h3>
-    <time datetime="2026-01-23">January 23, 2026</time>
-  </div>
+        <!-- 0.0.1 -->
+        <article class="update-card">
+          <div class="update-header">
+            <div class="update-version">
+              <span class="version-tag">v0.0.1</span>
+              <h3>First Block</h3>
+            </div>
+            <time datetime="2025-12-26">Dec 26, 2025</time>
+          </div>
+          <ul class="update-list">
+            <li>Added basic camera movement.</li>
+            <li>Added infinite flat terrain generator.</li>
+            <li>Created the first block prototype.</li>
+          </ul>
+          <div class="update-media">
+            <img src="assets/terrain.png" alt="First terrain screenshot">
+          </div>
+        </article>
 
-  <ul class="update-list">
+      </div>
+    </section>
 
-    <li>
-      Added <strong>hover tooltips</strong> for blocks in the inventory and hotbar (v1.0).
-    </li>
+    <!-- BUGS & FIXES -->
+    <section class="section" id="bugs">
+      <div class="section-inner">
+        <div class="section-label">Known Issues</div>
+        <h2 class="section-title">Bugs & Fixes</h2>
 
-    <li>Implemented the first <strong>Biome System (v1.0)</strong>, introducing Plains, Forest, and Mountain biomes.</li>
-
-    <li>
-      Implemented the first version of the <strong>Procedural Tree Generator</strong> (v1.0).
-    </li>
-
-    <li>
-      Added <strong>Block Rotation</strong> support, initially implemented for the
-      <strong>oak_log</strong> block.
-    </li>
-
-    <li>
-      Introduced the <strong>oak_log</strong> block with proper model and textures.
-    </li>
-
-    <li>
-      Expanded block variety with new blocks:
-      <ul>
-        <li>Oak Log</li>
-        <li>Oak Planks</li>
-        <li>Oak Leaves</li>
-        <li>Oak Dense Leaves</li>
-      </ul>
-    </li>
-
-    <!-- IMAGE -->
-  <div class="update-media">
-    <img src="assets/oak_tree_v1.png" alt="First block prototype screenshot">
-  </div>
-
-  <!-- IMAGE -->
-  <div class="update-media">
-    <img src="assets/log_rotation.png" alt="First block prototype screenshot">
-  </div>
-
-  </ul>
-</article>
-
-      <!-- UPDATE 0.0.6 -->
-      <article class="update-card">
-        <div class="update-header">
-          <h3>Update 0.0.6</h3>
-          <time datetime="2026-01-15">January 15, 2026</time>
+        <div class="bugs-table-wrap">
+          <table class="bugs-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Version Found</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="bug-id">#007</td>
+                <td>Water mesh flickering near chunk borders at sunset</td>
+                <td>v0.0.8</td>
+                <td><span class="status investigating">Investigating</span></td>
+              </tr>
+              <tr>
+                <td class="bug-id">#006</td>
+                <td>Oak leaves rendering on top of transparent water surface</td>
+                <td>v0.0.7</td>
+                <td><span class="status investigating">Investigating</span></td>
+              </tr>
+              <tr>
+                <td class="bug-id">#005</td>
+                <td>Block rotation desync after chunk reload</td>
+                <td>v0.0.7</td>
+                <td><span class="status fixed">Fixed in v0.0.8</span></td>
+              </tr>
+              <tr>
+                <td class="bug-id">#004</td>
+                <td>Creative inventory ordering incorrect for custom JSON blocks</td>
+                <td>v0.0.6</td>
+                <td><span class="status fixed">Fixed in v0.0.7</span></td>
+              </tr>
+              <tr>
+                <td class="bug-id">#003</td>
+                <td>Camera jitter at high movement speeds near world edge</td>
+                <td>v0.0.5</td>
+                <td><span class="status fixed">Fixed in v0.0.6</span></td>
+              </tr>
+              <tr>
+                <td class="bug-id">#002</td>
+                <td>Water shader Z-fighting with terrain at certain angles</td>
+                <td>v0.0.4</td>
+                <td><span class="status fixed">Fixed in v0.0.5</span></td>
+              </tr>
+              <tr>
+                <td class="bug-id">#001</td>
+                <td>Camera movement bug — erratic rotation on mouse input</td>
+                <td>v0.0.1</td>
+                <td><span class="status fixed">Fixed in v0.0.2</span></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-        <ul class="update-list">
-          <li>Introduced a <strong>3D Model System</strong> with support for Blockbench models and textures.
-      Models are now rendered in-game (currently limited to 16×16×16 block scale).</li>
-          <li>Implemented a dynamic <strong>Sky & Day/Night Cycle System</strong>, including sun and moon rendering,
-      smooth sunrise and sunset transitions, and a full 20-minute cycle
-      (10 minutes day / 10 minutes night).</li>
-          <li>Created a <strong>Creative Inventory</strong> displaying all blocks automatically,
-      ordered dynamically based on their JSON configuration.</li>
-          <li>Added a basic <strong>Hotbar System</strong> (slots 1–9) with initial textures and functionality.</li>
-        </ul>
-      </article>
+        <p class="bugs-note">Found a bug? Report it via the contact section below or open an issue on GitHub.</p>
+      </div>
+    </section>
 
-       <!-- UPDATE 0.0.5 -->
-      <article class="update-card">
-        <div class="update-header">
-          <h3>Update 0.0.5</h3>
-          <time datetime="2026-01-08">January 8, 2026</time>
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section-inner">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">☕</div>
+            <h3>Support the Dev</h3>
+            <p>If you enjoy watching Terra grow, consider supporting the project on Ko-fi.</p>
+            <a href="https://ko-fi.com/penguro" target="_blank" class="btn-primary">Ko-fi — penguro</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">🐛</div>
+            <h3>Report a Bug</h3>
+            <p>Spotted something wrong? Send a detailed report and help make Terra better.</p>
+           <a href="https://mail.google.com/mail/?view=cm&to=terra.devlog@gmail.com&su=Bug Report&body=Version found:%0ADescription:%0ASteps to reproduce:" target="_blank" class="btn-outline">Send a Report</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">💬</div>
+            <h3>General Inquiries</h3>
+            <p>Have questions, feedback, or collaboration ideas? Reach out directly.</p>
+            <a href="https://mail.google.com/mail/?view=cm&to=terra.devlog@gmail.com&su=General Inquiry" target="_blank" class="btn-outline">Get in Touch</a>
+          </div>
         </div>
-
-        <ul class="update-list">
-          <li>Introduced a JSON-based Block System (v1.0), allowing blocks to be added without modifying engine code.</li>
-          <li>Upgraded Camera Movement System 2.0.</li>
-          <li>Introduced better Water System & Water Mesh v2.0.</li>
-          <li>Introduced Terrain Generator System v3.0.</li>
-        </ul>
-
-        <!-- IMAGE -->
-  <div class="update-media">
-    <img src="assets/water.png" alt="First block prototype screenshot">
-  </div>
-
-      </article>
-
-      <!-- UPDATE 0.0.4 -->
-      <article class="update-card">
-        <div class="update-header">
-          <h3>Update 0.0.4</h3>
-          <time datetime="2026-01-02">January 2, 2026</time>
-        </div>
-
-        <ul class="update-list">
-          <li>Introduced <strong>Water Shader v1.0</strong> with dynamic rendering.</li>
-          <li>Implemented a separate <strong>Water Mesh system</strong> independent from chunk meshes.</li>
-          <li>Reworked <strong>Chunk Mesh System v2.0</strong> for improved performance.</li>
-          <li>
-            Expanded block variety with new terrain blocks:
-            <ul>
-              <li>Water</li>
-              <li>Andesite</li>
-              <li>Podzol</li>
-              <li>Coarse Dirt</li>
-              <li>Moss Block</li>
-            </ul>
-          </li>
-        </ul>
-      </article>
-
-      <!-- UPDATE 0.0.3 -->
-      <article class="update-card">
-        <div class="update-header">
-          <h3>Update 0.0.3</h3>
-          <time datetime="2025-12-30">December 30, 2025</time>
-        </div>
-
-        <ul class="update-list">
-          <li>Retextured all blocks for visual consistency.</li>
-          <li>Added block selection highlighting.</li>
-          <li>Implemented block breaking and placement mechanics.</li>
-          <li>Introduced Terrain Generator System v2.0.</li>
-        </ul>
-      </article>
-
-      <!-- UPDATE 0.0.2 -->
-      <article class="update-card">
-        <div class="update-header">
-          <h3>Update 0.0.2</h3>
-          <time datetime="2025-12-27">December 27, 2025</time>
-        </div>
-
-        <ul class="update-list">
-          <li>Fixed camera movement bug.</li>
-          <li>Added FPS counter and coordinate display.</li>
-          <li>Added new blocks: Dirt and Stone.</li>
-        </ul>
-      </article>
-
-      <!-- UPDATE 0.0.1 -->
-<article class="update-card">
-
-  <div class="update-header">
-    <h3>Update 0.0.1</h3>
-    <time datetime="2025-12-26">December 26, 2025</time>
-  </div>
-
-  <ul class="update-list">
-    <li>Added basic camera movement.</li>
-    <li>Added infinite flat terrain generator.</li>
-    <li>Created the first block prototype.</li>
-  </ul>
-
-  <!-- IMAGE -->
-  <div class="update-media">
-    <img src="assets/terrain.png" alt="First block prototype screenshot">
-  </div>
-
-</article>
-
+      </div>
     </section>
 
   </main>
 
-
-  <!-- ================= FOOTER ================= -->
-  <footer>
-    <p>Terra — A New Era © 2026</p>
-    <p>Status: <strong>In Development</strong> | Not Released</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-brand">Terra<span>.</span></span>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#updates">Dev Log</a>
+        <a href="#bugs">Bugs</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">Terra — A New Era © 2026 &nbsp;|&nbsp; Status: <strong>In Development</strong></p>
+    </div>
   </footer>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navAnchors = document.querySelectorAll('.nav-link');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navAnchors.forEach(a => a.classList.remove('active'));
+          const link = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { threshold: 0.35 });
+    sections.forEach(s => observer.observe(s));
+  </script>
 
 </body>
 </html>
